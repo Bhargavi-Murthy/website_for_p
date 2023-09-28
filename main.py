@@ -42,7 +42,9 @@ st.markdown(
         /* Style the body */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9dada; /* Light pink background */
+            background-image: url('background.jpg'); /* Specify the image path */
+            background-size: cover; /* Cover the entire screen */
+            background-repeat: no-repeat; /* No image repetition */
             margin: 0;
             padding: 0;
         }
