@@ -62,7 +62,7 @@ st.markdown(
 
         /* Style the h1 header */
         h1 {{
-            color: #ff6600; /* Orange text color */
+            color: ##D8BFD8; /* Orange text color */
             font-size: 36px;
         }}
 
