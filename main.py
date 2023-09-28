@@ -6,8 +6,9 @@ page = st.sidebar.radio("Go to:", ["Home", "About", "More"])
 
 # Streamlit content based on navigation
 if page == "Home":
-    st.title("Bha and Sheb's Auditory Recommendation System")
-    st.write("Enter your mood or preference and we'll recommend some music for you!")
+    st.image("Taylor_Swift_(6966830273).jpg", use_column_width=True)
+    st.title("Music Recommendation System")
+    st.write("Enter your mood or preference, and we'll recommend some music for you!")
 
     # Dummy music recommendation function
     def recommend_music(user_input):
@@ -26,14 +27,16 @@ if page == "Home":
             st.write(song)
 
 elif page == "About":
+    st.image("Taylor_Swift_(6966830273).jpg", use_column_width=True)
     st.title("About Us")
     st.write("This is the About Us page. We are passionate about music!")
 
 elif page == "More":
+    st.image("Taylor_Swift_(6966830273).jpg", use_column_width=True)
     st.title("More Information")
     st.write("Here you can find more information about our music recommendation system.")
 
-# Custom CSS styles with background image
+# Custom CSS styles with background and text color changes
 st.markdown(
     f"""
     <style>
@@ -42,16 +45,16 @@ st.markdown(
         /* Style the body */
         body {{
             font-family: Arial, sans-serif;
-            background-image: url('Screenshot_2019-05-08-00-18-47-705_com.whatsapp (1).png'); /* Specify the image path */
-            background-size: cover; /* Cover the entire screen */
-            background-repeat: no-repeat; /* No image repetition */
-            margin: 0;
+            background-color: thistle; /* Thistle purple background */
+            color: #8C0044; /* Hallmark purple text color */
+            text-align: center;
             padding: 0;
+            margin: 0;
         }}
 
         /* Style the header */
         header {{
-            background-color: ##D8BFD8;
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -59,7 +62,7 @@ st.markdown(
 
         /* Style the h1 header */
         h1 {{
-            color: ##1d1160; /* Orange text color */
+            color: #ff6600; /* Orange text color */
             font-size: 36px;
         }}
 
