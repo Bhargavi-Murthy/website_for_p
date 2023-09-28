@@ -1,24 +1,37 @@
 import streamlit as st
 
-# Streamlit content
-st.title("Music Recommendation System")
-st.write("Enter your mood or preference, and we'll recommend some music for you!")
+# Sidebar navigation
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to:", ["Home", "About", "More"])
 
-# Dummy music recommendation function
-def recommend_music(user_input):
-    # Replace this with your music recommendation logic
-    recommended_music = ["Song 1", "Song 2", "Song 3"]
-    return recommended_music
+# Streamlit content based on navigation
+if page == "Home":
+    st.title("Music Recommendation System")
+    st.write("Enter your mood or preference, and we'll recommend some music for you!")
+    
+    # Dummy music recommendation function
+    def recommend_music(user_input):
+        # Replace this with your music recommendation logic
+        recommended_music = ["Song 1", "Song 2", "Song 3"]
+        return recommended_music
 
-# Input for user's mood or preference
-user_input = st.text_input("Enter your mood or preference:")
+    # Input for user's mood or preference
+    user_input = st.text_input("Enter your mood or preference:")
+    
+    # Button to trigger music recommendation
+    if st.button("Recommend Music"):
+        recommended_music = recommend_music(user_input)
+        st.subheader("Recommended Music:")
+        for song in recommended_music:
+            st.write(song)
 
-# Button to trigger music recommendation
-if st.button("Recommend Music"):
-    recommended_music = recommend_music(user_input)
-    st.subheader("Recommended Music:")
-    for song in recommended_music:
-        st.write(song)
+elif page == "About":
+    st.title("About Us")
+    st.write("This is the About Us page. We are passionate about music!")
+
+elif page == "More":
+    st.title("More Information")
+    st.write("Here you can find more information about our music recommendation system.")
 
 # Custom CSS styles
 st.markdown(
