@@ -7,7 +7,7 @@ page = st.sidebar.radio("Go to:", ["Home", "About", "More"])
 # Streamlit content based on navigation
 if page == "Home":
     st.image("Taylor_Swift_(6966830273).jpg", use_column_width=True)
-    st.title("Music Recommendation System")
+    st.title("Bha and Sheb's Auditory Recommendation System")
     st.write("Enter your mood or preference, and we'll recommend some music for you!")
 
     # Dummy music recommendation function
