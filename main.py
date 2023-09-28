@@ -42,7 +42,7 @@ st.markdown(
         /* Style the body */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('![Taylor_Swift_(6966830273)](https://github.com/Bhargavi-Murthy/website_for_p/assets/115211115/2141d89e-22f4-4136-b0ec-6e32f2a439d9)'); /* Specify the image path */
+            background-image: url('https://github.com/Bhargavi-Murthy/website_for_p/blob/main/Taylor_Swift_(6966830273).jpg?raw=true'); /* Specify the image path */
             background-size: cover; /* Cover the entire screen */
             background-repeat: no-repeat; /* No image repetition */
             margin: 0;
