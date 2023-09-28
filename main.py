@@ -50,6 +50,9 @@ st.markdown(
             text-align: center;
             padding: 0;
             margin: 0;
+            background-image: url('Taylor_Swift_(6966830273).jpg'); /* Specify the image path */
+            background-size: cover; /* Cover the entire screen */
+            background-repeat: no-repeat; /* No image repetition */
         }}
 
         /* Style the header */
