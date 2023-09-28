@@ -15,6 +15,7 @@ page_bg_img = f"""
 <style>
 [data-testid="stAppViewContainer"] > .main {{
 background-size: 180%;
+background-image: url("https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png");
 background-position: top left;
 background-repeat: no-repeat;
 background-attachment: local;
