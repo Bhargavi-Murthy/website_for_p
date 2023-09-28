@@ -42,7 +42,7 @@ st.markdown(
         /* Style the body */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('Screenshot_2019-05-08-00-18-47-705_com.whatsapp%20(1).png'); /* Specify the image path */
+            background-image: url('https://github.com/Bhargavi-Murthy/website_for_p/blob/main/Screenshot_2019-05-08-00-18-47-705_com.whatsapp%20(1).png?raw=true'); /* Specify the image path */
             background-size: cover; /* Cover the entire screen */
             background-repeat: no-repeat; /* No image repetition */
             margin: 0;
