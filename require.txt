@@ -1,7 +1,6 @@
 streamlit==1.27.0
 pandas==2.1.1
 base58==2.1.1
-matplotlib==3.8.0
 numpy==1.25.2
 yfinance==0.2.30
 lxml==4.9.3
