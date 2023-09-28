@@ -49,7 +49,7 @@ st.markdown(
 
         /* Style the header */
         header {
-            background-color: #333;
+            background-color: #567;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -57,7 +57,7 @@ st.markdown(
 
         /* Style the h1 header */
         h1 {
-            color: #ff6600; /* Orange text color */
+            color: #87CEFA; /* Orange text color */
             font-size: 36px;
         }
 
