@@ -6,8 +6,8 @@ page = st.sidebar.radio("Go to:", ["Home", "About", "More"])
 
 # Streamlit content based on navigation
 if page == "Home":
-    st.title("Music Recommendation System")
-    st.write("Enter your mood or preference, and we'll recommend some music for you!")
+    st.title("Bha and Sheb's Auditory Recommendation System")
+    st.write("Enter your mood or preference and we'll recommend some music for you!")
 
     # Dummy music recommendation function
     def recommend_music(user_input):
@@ -51,7 +51,7 @@ st.markdown(
 
         /* Style the header */
         header {{
-            background-color: #333;
+            background-color: ##D8BFD8;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -59,7 +59,7 @@ st.markdown(
 
         /* Style the h1 header */
         h1 {{
-            color: #ff6600; /* Orange text color */
+            color: ##1d1160; /* Orange text color */
             font-size: 36px;
         }}
 
