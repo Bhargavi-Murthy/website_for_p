@@ -98,9 +98,15 @@ body {{
 </style>
 """
 
-# Display the custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
 
-# Your Streamlit app content
+# Reference the CSS file from the 'static' folder
+st.markdown(
+    f"""
+    <link rel="stylesheet" type="text/css" href="static/csscode.css">
+    """,
+    unsafe_allow_html=True
+)
+
+# Your Streamlit app content goes here
 st.title("My Streamlit App")
-st.write("This is your Streamlit app with a background image.")
+st.write("This is your Streamlit app with a custom CSS template.")
