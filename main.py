@@ -36,7 +36,7 @@ elif page == "More":
     st.title("More Information")
     st.write("Here you can find more information about our music recommendation system.")
 
-# Custom CSS styles with background and text color changes
+# Custom CSS styles with background image
 st.markdown(
     f"""
     <style>
@@ -45,11 +45,11 @@ st.markdown(
         /* Style the body */
         body {{
             font-family: Arial, sans-serif;
-            background-color: thistle; /* Thistle purple background */
-            color: #8C0044; /* Hallmark purple text color */
-            text-align: center;
-            padding: 0;
+            background-image: url('background.jpg'); /* Specify the image path */
+            background-size: cover; /* Cover the entire screen */
+            background-repeat: no-repeat; /* No image repetition */
             margin: 0;
+            padding: 0;
         }}
 
         /* Style the header */
