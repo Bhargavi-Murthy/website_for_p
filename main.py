@@ -1,64 +1,88 @@
-import base64
 import streamlit as st
 
+# Sidebar navigation
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to:", ["Home", "About", "More"])
 
-@st.experimental_memo
-def get_img_as_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+# Streamlit content based on navigation
+if page == "Home":
+    st.image("your_image.jpg", use_column_width=True)
+    st.title("Music Recommendation System")
+    st.write("Enter your mood or preference, and we'll recommend some music for you!")
 
+    # Dummy music recommendation function
+    def recommend_music(user_input):
+        # Replace this with your music recommendation logic
+        recommended_music = ["Song 1", "Song 2", "Song 3"]
+        return recommended_music
 
-img = get_img_as_base64("image.jpg")
+    # Input for user's mood or preference
+    user_input = st.text_input("Enter your mood or preference:")
 
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] > .main {{
-background-size: 180%;
-background-image: url("https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png");
-background-position: top left;
-background-repeat: no-repeat;
-background-attachment: local;
-}}
+    # Button to trigger music recommendation
+    if st.button("Recommend Music"):
+        recommended_music = recommend_music(user_input)
+        st.subheader("Recommended Music:")
+        for song in recommended_music:
+            st.write(song)
 
-[data-testid="stSidebar"] > div:first-child {{
-background-image: url("data:image.jpg;base64,{img}");
-background-position: center; 
-background-repeat: no-repeat;
-background-attachment: fixed;
-}}
+elif page == "About":
+    st.image("your_image.jpg", use_column_width=True)
+    st.title("About Us")
+    st.write("This is the About Us page. We are passionate about music!")
 
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
+elif page == "More":
+    st.image("your_image.jpg", use_column_width=True)
+    st.title("More Information")
+    st.write("Here you can find more information about our music recommendation system.")
 
-[data-testid="stToolbar"] {{
-right: 2rem;
-}}
-</style>
-"""
+# Custom CSS styles with background and text color changes
+st.markdown(
+    f"""
+    <style>
+        /* CSS styles go here */
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("It's summer!")
-st.sidebar.header("Configuration")
+        /* Style the body */
+        body {{
+            font-family: Arial, sans-serif;
+            background-color: thistle; /* Thistle purple background */
+            color: #8C0044; /* Hallmark purple text color */
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }}
 
-with st.container():
-    st.header("Big one")
-    st.markdown(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    )
-with st.container():
-    st.header("Big 2")
-    st.markdown(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    )
-with st.container():
-    st.header("Big 3")
-    st.markdown(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    )
-with st.container():
-    st.header("Big 4")
-    st.markdown(
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    )
+        /* Style the header */
+        header {{
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }}
+
+        /* Style the h1 header */
+        h1 {{
+            color: #ff6600; /* Orange text color */
+            font-size: 36px;
+        }}
+
+        /* Style paragraphs */
+        p {{
+            font-size: 18px;
+            line-height: 1.5;
+        }}
+
+        /* Style links */
+        a {{
+            text-decoration: none;
+            color: #0073e6; /* Blue link color */
+        }}
+
+        /* Change link color on hover */
+        a:hover {{
+            color: #00468c; /* Darker blue on hover */
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
