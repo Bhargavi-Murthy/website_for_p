@@ -6,7 +6,6 @@ page = st.sidebar.radio("Go to:", ["Home", "About", "More"])
 
 # Streamlit content based on navigation
 if page == "Home":
-    st.image("your_image.jpg", use_column_width=True)
     st.title("Music Recommendation System")
     st.write("Enter your mood or preference, and we'll recommend some music for you!")
 
@@ -27,12 +26,10 @@ if page == "Home":
             st.write(song)
 
 elif page == "About":
-    st.image("your_image.jpg", use_column_width=True)
     st.title("About Us")
     st.write("This is the About Us page. We are passionate about music!")
 
 elif page == "More":
-    st.image("your_image.jpg", use_column_width=True)
     st.title("More Information")
     st.write("Here you can find more information about our music recommendation system.")
 
