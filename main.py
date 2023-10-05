@@ -83,3 +83,24 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+# Define the background image URL
+background_image_url = "https://unsplash.com/photos/nN1HSDtKdlw"
+
+# Define custom CSS styles to set the background image
+custom_css = f"""
+<style>
+body {{
+    background-image: url('{background_image_url}');
+    background-size: cover;
+    background-repeat: no-repeat;
+}}
+</style>
+"""
+
+# Display the custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
+
+# Your Streamlit app content
+st.title("My Streamlit App")
+st.write("This is your Streamlit app with a background image.")
